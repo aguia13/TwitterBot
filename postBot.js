@@ -4,10 +4,10 @@ var Twit = require('twit');
 var config = require('./config');
 var T = new Twit(config);
 
-function tweetIt(){
+function tweetIt(txt){
 
 	var tweet = {
-		status: 'nothing to see here'
+		status: txt
 	}
 
 	T.post('statuses/update',tweet,tweeted);
